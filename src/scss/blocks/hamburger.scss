@@ -1,0 +1,64 @@
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
+.hamburger {
+  display: inline-block;
+
+  @include responsive(laptop) {
+    display: none;
+  }
+
+  &__i {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transition: all ease-out 0.1s;
+  }
+
+  &__a.main-nav-toggle {
+    display: block;
+    width: 34px;
+    height: 24px;
+    position: absolute;
+    top: 30px;
+    right: 32px;
+
+    &:after,
+    &:before {
+      @include pseudo(100%, 0) {
+        top: 0;
+        border-bottom: 2px solid black;
+        left: 0;
+        right: 0;
+        transition: all ease-out 0.3s;
+      }
+    }
+
+    &:after {
+      top: 100%;
+    }
+
+    &.active-menu {
+      &:after {
+        transform: rotate(-45deg);
+        transform-origin: center;
+        top: 50%;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+        transform-origin: center;
+        top: 50%;
+      }
+
+      .hamburger__i {
+        opacity: 0;
+      }
+    }
+  }
+}

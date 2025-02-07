@@ -3,28 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <!-- PON UN FAVICON!!! -->
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/svg+xml" href />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CAMBIA EL TITLE!!! -->
-    <title>Vite Template</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/thunder-2" rel="stylesheet">
+
+    <title>Portfolio Hector Grande Linares</title>
   </head>
   <body>
-    <h1>HOME</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="/">HOME</a>
-        </li>
-        <li>
-          <a href="./html/about.html">ABOUT</a>
-        </li>
-        <li>
-          <a href="./html/contact.html">CONTACT</a>
-        </li>
-      </ul>
-    </nav>
-    <button id="button">CLICK HOME</button>
 
-    <script type="module" src="./js/index.js"></script>
-  </body>
-</html>
+    <header class="header">
+      <div class="header__bar">
+        <img src="./assets/images/Logo.svg" alt="LOGO" class="header__logo">
+        <div class="hamburger">
+          <a id="hamburger" class="main-nav-toggle hamburger__a"
+            href="#main-nav"><i
+              class="hamburger__i"></i></a>
+        </div>
+      </div>
+      <nav>
+        <ul id="menu" class="menu">
+          <li class="menu__item">
+            <a href class="menu__link">Portfolio</a>
+          </li>
+          <li class="menu__item">
+            <a href class="menu__link">About</a>
+          </li>
+          <li class="menu__item">
+            <a href class="menu__link">Contact</a>
+          </li>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="portfolio">
+          <div class="portfolio__box">
+
+            <div class="portfolio__circle">
+              <img class="portfolio__img" src="./assets/images/face_img.png"
+                alt="face_img">
+            </div>
+
+            <div class="portfolio__info">
+              <h2 class="text-ExtraLight portfolio__span">Hello! I'm</h2>
+              <div class="portfolio__name">
+                <h2 class="text-SemiBold">Héctor</h2>
+                <h2 class="text-SemiBold portfolio__span">Grande</h2>
+              </div>
+
+              <div class="portfolio__email">
+                <h2
+                  class="text-Regular text-Regular-small">hectorgranl@gmail.com</h2>
+                <img
+                  src="./assets/images/Mail_icon.svg" alt="mail-icon">
+
+              </div>
+
+            </div>
+          </div>
+          <div class="portfolio__text">
+            <h2 class="portfolio__title text-Bold">PORTFOLIO</h2>
+            <p
+              class="text-Medium text-Medium-width portfolio__text--product">I’m
+              a product and
+              graphic <br>
+              designer, searching for creative <br>
+              interfaces and intuitive experiences</p>
+            <div class="portfolio__book">
+              <img class="portfolio__book--circle"
+                src="./assets/images/Circle_seal.svg" alt="circle_seal">
+              <img class="portfolio__book--book" src="./assets/images/Book.svg"
+                alt="book">
+            </div>
+            <p class="text-Light">Moving rectagles around (professionally)</p>
+          </div>
+
+        </div>
+
+        <div class="tools">
+          <h2 class="tools__title text-Regular">My main tools:</h2>
+          <div class="tools__box">
+            <a href>
+              <img src="./assets/images/figma.svg" alt>
+            </a>
+            <a href>
+              <img src="./assets/images/wp.svg" alt>
+            </a>
+            <a href>
+              <img src="./assets/images/adobe.svg" alt>
+            </a>
+          </div>
+        </div>
+
+        <div class="infiniteText">
+          <span class="words">GET A SNEAK PEAK. </span>
+        </div>
+
+        <div id="proyect" class="project">
+          <div class="infiniteText-2">
+            <span class="words-2 ">THANKS. </span>
+          </div>
+        </div>
+
+        <div class="portfolio__logo">
+          <img src="./assets/images/Logo.svg" alt="Logo">
+        </div>
+      </main>
+
+      <footer class="footer">
+        <a class="footer__link text-Medium text-Medium-footer"
+          href="#">Portfolio</a>
+        <a class="footer__link text-Medium text-Medium-footer"
+          href="#">About</a>
+        <a class="footer__link text-Medium text-Medium-footer"
+          href="#">Contact</a>
+      </footer>
+
+      <script type="module" src="./js/index.js"></script>
+    </body>
+  </html>

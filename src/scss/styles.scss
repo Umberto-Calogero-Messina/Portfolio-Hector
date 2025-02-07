@@ -1,4 +1,14 @@
 @use 'base/normalize.scss';
 @use 'base/initial-reset.scss';
 @use 'config/variables.scss';
+@use 'config/fonts.scss';
+@use 'blocks/texts.scss';
 @use 'blocks/body.scss';
+@use 'blocks/main.scss';
+@use 'blocks/header.scss';
+@use 'blocks/hamburger.scss';
+@use 'blocks/portfolio.scss';
+@use 'blocks/tools.scss';
+@use 'blocks/infiniteText.scss';
+@use 'blocks/proyect.scss';
+@use 'blocks/footer.scss';

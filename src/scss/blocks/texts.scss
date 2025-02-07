@@ -1,1 +1,103 @@
+@use '../mixins/responsive.scss' as *;
 
+.text {
+  &-ExtraLight {
+    font-family: 'ClashDisplay-Extralight';
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 90%;
+    color: white;
+
+    @include responsive(desktop) {
+      font-size: 40px;
+    }
+
+    &-small {
+      font-size: 12px;
+    }
+  }
+  &-Light {
+    width: 215px;
+    font-family: 'ClashDisplay-Light';
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 300;
+
+    @include responsive(tablet) {
+      width: 286px;
+      font-size: 24px;
+    }
+
+    @include responsive(desktop) {
+      width: 536px;
+      font-size: 40px;
+    }
+
+    &-small {
+      font-size: 12px;
+    }
+  }
+  &-Regular {
+    width: 280px;
+    font-family: 'ClashDisplay-Regular';
+    font-size: 12px;
+    line-height: 90%;
+    font-weight: 400;
+
+    &-small {
+      font-size: 12px;
+      @include responsive(desktop) {
+        font-size: 15px;
+      }
+    }
+  }
+  &-Medium {
+    font-family: 'ClashDisplay-Medium';
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: -2%;
+    font-weight: 500;
+
+    @include responsive(desktop) {
+      font-size: 26px;
+    }
+
+    &-width {
+      width: 280px;
+      @include responsive(desktop) {
+        width: 634px;
+      }
+    }
+    &-footer {
+      color: #868686;
+    }
+  }
+  &-SemiBold {
+    font-family: 'ClashDisplay-SemiBold';
+    font-weight: 600;
+    font-size: 62px;
+    line-height: 90%;
+    color: white;
+    @include responsive(desktop) {
+      font-size: 78px;
+    }
+  }
+  &-Bold {
+    font-family: 'ClashDisplay-Bold';
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 90%;
+
+    @include responsive(tablet) {
+      font-size: 96px;
+    }
+
+    @include responsive(laptop) {
+      font-size: 78px;
+    }
+
+    @include responsive(desktop) {
+      font-size: 133px;
+    }
+  }
+}

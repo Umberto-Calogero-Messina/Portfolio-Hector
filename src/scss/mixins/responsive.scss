@@ -4,9 +4,11 @@ $breakpoints: (
   desktop: 1440px
 );
 
+@use 'sass:map';
+
 @mixin responsive($key) {
-  @if map-has-key($breakpoints, $key) {
-    @media screen and (min-width: map-get($breakpoints, $key)) {
+  @if map.has-key($breakpoints, $key) {
+    @media screen and (min-width: map.get($breakpoints, $key)) {
       @content;
     }
   } @else {

@@ -1,0 +1,48 @@
+@use '../mixins/responsive.scss' as *;
+
+.project {
+  background-color: black;
+  padding-block: 60px;
+  margin-bottom: 72px;
+
+  @include responsive(laptop) {
+  }
+
+  &__box {
+    width: 343px;
+    height: 247px;
+
+    margin-inline: auto;
+    margin-bottom: 32px;
+    border-radius: 21px;
+
+    background-image: url('./assets/images/Card1.svg');
+    background-size: cover;
+
+    @include responsive(tablet) {
+      width: 546px;
+      background-position: center;
+    }
+
+    @include responsive(tablet) {
+      background-position: top;
+    }
+  }
+
+  &__elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 16px;
+    padding-top: 24px;
+  }
+
+  &__text {
+    width: 215px;
+    font-family: 'ClashDisplay-Light';
+    font-size: 34px;
+    line-height: 90%;
+    color: white;
+    font-weight: 300;
+  }
+}

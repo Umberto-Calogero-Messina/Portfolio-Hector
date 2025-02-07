@@ -1,0 +1,27 @@
+@use '../mixins/responsive.scss' as *;
+
+.tools {
+  width: 194px;
+  margin-inline: auto;
+  margin-bottom: 97px;
+  text-align: center;
+  padding-top: 37px;
+
+  border-top: 1px solid rgb(0, 0%, 0%, 0.3);
+
+  @include responsive(laptop) {
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+}

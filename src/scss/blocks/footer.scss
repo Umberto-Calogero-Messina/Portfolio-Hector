@@ -1,1 +1,15 @@
-/* ESTILOS DEL FOOTER */
+@use '../mixins/responsive.scss' as *;
+
+.footer {
+  margin-inline: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border-block: 1px solid rgb(0, 0%, 0%, 0.3);
+  padding: 32px 17px;
+
+  &__link {
+    margin-block: 12px;
+  }
+}

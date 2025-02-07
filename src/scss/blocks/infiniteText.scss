@@ -1,0 +1,103 @@
+@use '../mixins/responsive.scss' as *;
+
+.infiniteText {
+  position: relative;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  margin-inline: auto;
+  font-family: 'ClashDisplay-SemiBold';
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 90%;
+  overflow: hidden;
+
+  @include responsive(tablet) {
+    height: 70px;
+    font-size: 80px;
+  }
+}
+
+@function generate-text-shadow($text-width) {
+  $val: '';
+
+  @for $i from 1 to 3 {
+    $val: #{$val}, $text-width * $i 0;
+  }
+
+  @return $val;
+}
+
+.words {
+  $text-width: 500px;
+  display: inline-block;
+  white-space: nowrap;
+  width: $text-width;
+  animation: move-text 6s linear infinite;
+  text-shadow: generate-text-shadow($text-width);
+
+  @include responsive(tablet) {
+    $text-width: 810px;
+    width: $text-width;
+    text-shadow: generate-text-shadow($text-width);
+  }
+}
+
+@keyframes move-text {
+  to {
+    transform: translateX(-100%);
+  }
+}
+.infiniteText-2 {
+  position: relative;
+  top: 75px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin-inline: auto;
+  font-family: 'ClashDisplay-SemiBold';
+  font-weight: 600;
+  font-size: 71px;
+  line-height: 90%;
+  overflow: hidden;
+  color: white;
+  @include responsive(tablet) {
+    height: 70px;
+    font-size: 90px;
+    top: 67px;
+  }
+}
+
+@function generate-text-shadow-2($text-width) {
+  $val: '';
+
+  @for $i from 1 to 6 {
+    $val: #{$val}, $text-width * $i 0;
+  }
+
+  @return $val;
+}
+
+.words-2 {
+  $text-width: 340px;
+  display: inline-block;
+  white-space: nowrap;
+  width: $text-width;
+  animation: move-text 6s linear infinite;
+  text-shadow: generate-text-shadow-2($text-width);
+
+  @include responsive(tablet) {
+    $text-width: 420px;
+    width: $text-width;
+    text-shadow: generate-text-shadow-2($text-width);
+  }
+}
+
+@keyframes move-text {
+  to {
+    transform: translateX(-100%);
+  }
+}
