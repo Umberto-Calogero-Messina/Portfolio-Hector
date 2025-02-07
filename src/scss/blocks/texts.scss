@@ -87,6 +87,7 @@
     font-weight: 700;
     font-size: 56px;
     line-height: 90%;
+    letter-spacing: -2px;
 
     @include responsive(tablet) {
       font-size: 96px;
@@ -97,7 +98,7 @@
     }
 
     @include responsive(desktop) {
-      font-size: 133px;
+      font-size: 135px;
     }
   }
 }

@@ -12,6 +12,7 @@
   font-weight: 600;
   font-size: 50px;
   line-height: 90%;
+  letter-spacing: -2px;
   overflow: hidden;
 
   @include responsive(tablet) {
@@ -62,6 +63,7 @@
   font-weight: 600;
   font-size: 71px;
   line-height: 90%;
+  letter-spacing: -2px;
   overflow: hidden;
   color: white;
   @include responsive(tablet) {
