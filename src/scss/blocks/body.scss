@@ -5,7 +5,7 @@ body {
   &::after {
     @include pseudo(100vw, 1px) {
       position: fixed;
-      top: 93px;
+      top: 88px;
       left: 0;
       background-color: var(--border-variable);
     }
