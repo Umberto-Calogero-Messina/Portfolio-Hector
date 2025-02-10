@@ -8,6 +8,11 @@
   border-bottom: 1px solid var(--border-variable);
   margin-bottom: 93px;
   z-index: 10;
+
+  @include responsive(desktop) {
+    display: flex;
+  }
+
   &__bar {
     max-width: 1440px;
     margin-inline: auto;
@@ -75,8 +80,9 @@
     color: #242424;
   }
   @include responsive(desktop) {
-    max-width: 1440px;
-    margin-inline: auto;
+    position: static;
+    max-width: 1400px;
+    background-color: black;
   }
 
   &--active {
