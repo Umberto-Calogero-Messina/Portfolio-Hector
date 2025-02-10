@@ -30,8 +30,7 @@
 
 @font-face {
   font-family: 'ClashDisplay-Variable';
-  src: url('./fonts/fonts/ClashDisplay-Variable.woff2') format('woff2'),
-    url('./fonts/fonts/ClashDisplay-Variable.woff') format('woff'),
+  src: url('./fonts/fonts/ClashDisplay-Variable.woff2') format('woff2'), url('./fonts/fonts/ClashDisplay-Variable.woff') format('woff'),
     url('./fonts/fonts/ClashDisplay-Variable.ttf') format('truetype');
   font-weight: 200 700;
   font-display: swap;
@@ -40,8 +39,7 @@
 
 @font-face {
   font-family: 'ClashDisplay-Extralight';
-  src: url('./fonts/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
-    url('./fonts/fonts/ClashDisplay-Extralight.woff') format('woff'),
+  src: url('./fonts/fonts/ClashDisplay-Extralight.woff2') format('woff2'), url('./fonts/fonts/ClashDisplay-Extralight.woff') format('woff'),
     url('./fonts/fonts/ClashDisplay-Extralight.ttf') format('truetype');
   font-weight: 200;
   font-display: swap;
@@ -50,8 +48,7 @@
 
 @font-face {
   font-family: 'ClashDisplay-Light';
-  src: url('./fonts/fonts/ClashDisplay-Light.woff2') format('woff2'),
-    url('./fonts/fonts/ClashDisplay-Light.woff') format('woff'),
+  src: url('./fonts/fonts/ClashDisplay-Light.woff2') format('woff2'), url('./fonts/fonts/ClashDisplay-Light.woff') format('woff'),
     url('./fonts/fonts/ClashDisplay-Light.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
@@ -60,8 +57,7 @@
 
 @font-face {
   font-family: 'ClashDisplay-Regular';
-  src: url('./fonts/fonts/ClashDisplay-Regular.woff2') format('woff2'),
-    url('./fonts/fonts/ClashDisplay-Regular.woff') format('woff'),
+  src: url('./fonts/fonts/ClashDisplay-Regular.woff2') format('woff2'), url('./fonts/fonts/ClashDisplay-Regular.woff') format('woff'),
     url('./fonts/fonts/ClashDisplay-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
@@ -70,8 +66,7 @@
 
 @font-face {
   font-family: 'ClashDisplay-Medium';
-  src: url('./fonts/fonts/ClashDisplay-Medium.woff2') format('woff2'),
-    url('./fonts/fonts/ClashDisplay-Medium.woff') format('woff'),
+  src: url('./fonts/fonts/ClashDisplay-Medium.woff2') format('woff2'), url('./fonts/fonts/ClashDisplay-Medium.woff') format('woff'),
     url('./fonts/fonts/ClashDisplay-Medium.ttf') format('truetype');
   font-weight: 500;
   font-display: swap;
@@ -80,18 +75,16 @@
 
 @font-face {
   font-family: 'ClashDisplay-Semibold';
-  src: url('./fonts/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-    url('./fonts/fonts/ClashDisplay-Semibold.woff') format('woff'),
+  src: url('./fonts/fonts/ClashDisplay-Semibold.woff2') format('woff2'), url('./fonts/fonts/ClashDisplay-Semibold.woff') format('woff'),
     url('./fonts/fonts/ClashDisplay-Semibold.ttf') format('truetype');
-  font-weight: 100;
+  font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ClashDisplay-Bold';
-  src: url('./fonts/fonts/ClashDisplay-Bold.woff2') format('woff2'),
-    url('./fonts/fonts/ClashDisplay-Bold.woff') format('woff'),
+  src: url('./fonts/fonts/ClashDisplay-Bold.woff2') format('woff2'), url('./fonts/fonts/ClashDisplay-Bold.woff') format('woff'),
     url('./fonts/fonts/ClashDisplay-Bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;

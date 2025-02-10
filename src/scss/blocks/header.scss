@@ -5,13 +5,12 @@
   top: 0;
   backdrop-filter: blur(20px);
   background-color: rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid var(--border-variable);
+  // border-bottom: 1px solid var(--border-variable);
   margin-bottom: 93px;
   z-index: 10;
-
-  @include responsive(desktop) {
-    display: flex;
-  }
+  max-width: 1440px;
+  margin-inline: auto;
+  overflow-x: clip;
 
   &__bar {
     max-width: 1440px;
@@ -56,7 +55,6 @@
 }
 
 .menu {
-  display: none;
   flex-direction: column;
   justify-content: center;
   position: absolute;
@@ -73,16 +71,14 @@
     height: 76px;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: transparent;
     margin-top: 30px;
     z-index: 10;
     color: #242424;
   }
   @include responsive(desktop) {
-    position: static;
-    max-width: 1400px;
-    background-color: black;
+    right: 0;
   }
 
   &--active {

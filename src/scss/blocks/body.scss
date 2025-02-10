@@ -1,5 +1,13 @@
-html {
-}
+@use '../mixins/pseudo.scss' as *;
 body {
   font-family: sans-serif;
+
+  &::after {
+    @include pseudo(100vw, 1px) {
+      position: fixed;
+      top: 93px;
+      left: 0;
+      background-color: var(--border-variable);
+    }
+  }
 }

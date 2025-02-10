@@ -10,11 +10,8 @@ const toggleMenu = () => {
   hamburgerButton.src = isMenuActive ? './assets/images/hamburguer.svg' : './assets/images/hamburguer.svg';
 };
 
-hamburgerElement.addEventListener('click', function (e) {
-  e.preventDefault();
-  this.classList.toggle('active-menu');
-});
-const proyectContainer = document.getElementById('proyect');
+hamburgerElement.addEventListener('click', toggleMenu);
+const proyectContainer = document.getElementById('project-grid');
 const fragment = document.createDocumentFragment();
 
 ProyectElements.forEach(element => {
