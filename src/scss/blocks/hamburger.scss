@@ -3,6 +3,7 @@
 
 .hamburger {
   display: inline-block;
+  z-index: 10;
 
   @include responsive(laptop) {
     display: none;
@@ -61,4 +62,8 @@
       }
     }
   }
+}
+
+.bg_white {
+  background-color: #fff;
 }
