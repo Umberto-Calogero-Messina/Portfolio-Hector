@@ -1,94 +1,143 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
 
 .project {
   background-color: black;
   padding-block: 60px;
-  margin-bottom: 72px;
+  margin-bottom: 70px;
+  position: relative;
 
-  &__box {
-    width: 343px;
-    height: 247px;
-
-    margin-inline: auto;
-    margin-bottom: 32px;
-    border-radius: 21px;
-
-    background-image: url('./assets/images/Card1.svg');
-    background-size: cover;
-
-    @include responsive(tablet) {
-      width: 546px;
-      background-position: center;
-    }
-
-    @include responsive(tablet) {
-      background-position: top;
-    }
-
-    @include responsive(laptop) {
-    }
-  }
-
-  &__elements {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 16px;
-    padding-top: 24px;
-  }
-
-  &__text {
+  &__title {
     width: 215px;
     font-family: 'ClashDisplay-Light';
     font-size: 34px;
     line-height: 90%;
     color: white;
     font-weight: 300;
+    position: relative;
+
+    &::after {
+      @include pseudo(100%, 1px) {
+        left: 0;
+        bottom: -10px;
+        background-color: #fff;
+        scale: 0;
+        transform-origin: left;
+        transition: scale 0.8s ease;
+      }
+    }
   }
-}
 
-.project-row {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.project__box {
-  background-color: rgb(236, 236, 236);
-  padding: 1rem;
-  border-radius: 2rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  color: white;
-  transition: width 0.3s;
-}
-
-.project__text {
-  font-size: 3rem;
-}
-
-.box-text {
-  width: 60%;
-}
-
-.box-1 {
-  width: 70%;
-}
-
-.box-2 {
-  width: 30%;
-}
-
-@media (hover: hover) {
-  .box-1:hover {
-    width: 100%;
+  &__element {
+    display: flex;
+    justify-content: space-between;
   }
-}
 
-@media (hover: hover) {
-  .box-2:hover {
-    width: 100%;
+  &__subtitle {
+    font-family: 'ClashDisplay-Light';
+    font-size: 24px;
+    line-height: 120%;
+    @include responsive(laptop) {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+  }
+
+  &-row {
+    @include responsive(laptop) {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-inline: 117px;
+    }
+    @include responsive(desktop) {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-inline: 123px;
+    }
+    &-reverse {
+      @include responsive(laptop) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    display: none;
+
+    @include responsive(laptop) {
+      display: block;
+    }
+
+    &-right {
+      right: 40px;
+    }
+    &-left {
+      left: 40px;
+    }
+  }
+
+  &__box {
+    --bg-image-mobile: ;
+    --bg-image-tablet: ;
+    --bg-image-laptop: ;
+    --bg-image-desktop: ;
+    background-image: var(--bg-image-mobile);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 257px;
+    background-color: rgb(236, 236, 236);
+    padding: 1rem;
+    margin-bottom: 32px;
+    margin-inline: 16px;
+    border-radius: 21px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include responsive(tablet) {
+      height: 257px;
+      background-position: center;
+    }
+    @include responsive(laptop) {
+      background-position: top;
+      transition: width 0.8s;
+
+      @include hover {
+        & .project__subtitle {
+          opacity: 1;
+        }
+
+        & .project__title::after {
+          scale: 1;
+        }
+      }
+    }
+
+    @include responsive(desktop) {
+      background-position: center;
+    }
+
+    &-1 {
+      @include responsive(laptop) {
+        width: 60%;
+        @include hover {
+          width: 100%;
+        }
+      }
+    }
+
+    &-2 {
+      @include responsive(laptop) {
+        width: 40%;
+        @include hover {
+          width: 100%;
+        }
+      }
+    }
   }
 }

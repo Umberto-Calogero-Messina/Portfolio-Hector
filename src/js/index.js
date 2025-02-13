@@ -1,5 +1,5 @@
 import '../scss/styles.scss';
-import { ProyectElements } from './project';
+import { PROJECTS } from './project';
 const menuElement = document.getElementById('menu');
 const hamburgerElement = document.getElementById('hamburger');
 
@@ -10,36 +10,79 @@ const toggleMenu = () => {
   hamburgerButton.src = isMenuActive ? './assets/images/hamburguer.svg' : './assets/images/hamburguer.svg';
 };
 
-hamburgerElement.addEventListener('click', toggleMenu);
-const proyectContainer = document.getElementById('project-grid');
+const projectsElement = document.getElementById('project-container');
+
 const fragment = document.createDocumentFragment();
 
-ProyectElements.forEach(element => {
-  const divElement = document.createElement('div');
-  divElement.classList.add('project__box');
+const createRow = projetRow => {
+  const newRow = document.createElement('div');
+  const newRowClass = projetRow.reverse && 'project-row-reverse';
+  newRow.classList.add('project-row', newRowClass);
 
-  const flexContainer = document.createElement('div');
-  flexContainer.classList.add('project__elements');
+  const newBox = document.createElement('div');
+  newBox.classList.add('project__box', 'project__box-1');
+  newBox.style.setProperty('--bg-image-mobile', projetRow.bgImageMobileBox1);
 
-  const textElement = document.createElement('h2');
-  textElement.classList.add('project__text');
-  textElement.textContent = element.text;
-  flexContainer.appendChild(textElement);
+  const newBoxTexts = document.createElement('div');
+  newBoxTexts.classList.add('project__element');
 
-  const buttonElement = document.createElement('a');
-  buttonElement.href = '#';
+  const newTitle = document.createElement('h2');
+  newTitle.classList.add('project__title');
+  newTitle.textContent = projetRow.titleBox1;
 
-  const buttonImage = document.createElement('img');
-  buttonImage.src = element.imgButton;
-  buttonImage.alt = 'Button';
+  const newLink = document.createElement('a');
+  newLink.classList.add('box-text');
+  newLink.href = '#';
 
-  buttonElement.classList.add('project__button');
+  const imgElement = document.createElement('img');
+  imgElement.classList.add('box-img');
+  imgElement.src = projetRow.imgButtonBox1;
+  imgElement.alt = 'Button';
 
-  buttonElement.appendChild(buttonImage);
-  flexContainer.appendChild(buttonElement);
-  divElement.appendChild(flexContainer);
+  const pElement = document.createElement('p');
+  pElement.classList.add('project__subtitle');
+  pElement.textContent = projetRow.subTitleBox1;
 
-  fragment.appendChild(divElement);
+  newLink.append(imgElement);
+  newBoxTexts.append(newTitle, newLink);
+  newBox.append(newBoxTexts, pElement);
+
+  const newBox2 = document.createElement('div');
+  newBox2.classList.add('project__box', 'project__box-2');
+  newBox2.style.setProperty('--bg-image-mobile', projetRow.bgImageMobileBox2);
+
+  const newBoxTexts2 = document.createElement('div');
+  newBoxTexts2.classList.add('project__element');
+
+  const newTitle2 = document.createElement('h2');
+  newTitle2.classList.add('project__title');
+  newTitle2.textContent = projetRow.titleBox2;
+
+  const newLink2 = document.createElement('a');
+  newLink2.classList.add('box-text');
+  newLink2.href = '#';
+
+  const imgElement2 = document.createElement('img');
+  imgElement2.classList.add('box-img');
+  imgElement2.src = projetRow.imgButtonBox2;
+  imgElement2.alt = 'Button';
+
+  const pElement2 = document.createElement('p');
+  pElement2.classList.add('project__subtitle');
+  pElement2.textContent = projetRow.subTitleBox2;
+
+  newLink2.append(imgElement2);
+
+  newBoxTexts2.append(newTitle2, newLink2);
+  newBox2.append(newBoxTexts2, pElement2);
+
+  newRow.append(newBox, newBox2);
+
+  fragment.appendChild(newRow);
+};
+
+PROJECTS.forEach(element => {
+  createRow(element);
 });
 
-proyectContainer.insertBefore(fragment, proyectContainer.firstChild);
+projectsElement.insertBefore(fragment, projectsElement.firstChild);
