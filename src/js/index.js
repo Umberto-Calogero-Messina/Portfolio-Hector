@@ -31,11 +31,11 @@ const createRow = projetRow => {
   newTitle.textContent = projetRow.titleBox1;
 
   const newLink = document.createElement('a');
-  newLink.classList.add('box-text');
+  newLink.classList.add('project__box-text');
   newLink.href = '#';
 
   const imgElement = document.createElement('img');
-  imgElement.classList.add('box-img');
+  imgElement.classList.add('project__box-img');
   imgElement.src = projetRow.imgButtonBox1;
   imgElement.alt = 'Button';
 
@@ -59,11 +59,11 @@ const createRow = projetRow => {
   newTitle2.textContent = projetRow.titleBox2;
 
   const newLink2 = document.createElement('a');
-  newLink2.classList.add('box-text');
+  newLink2.classList.add('project__box-text');
   newLink2.href = '#';
 
   const imgElement2 = document.createElement('img');
-  imgElement2.classList.add('box-img');
+  imgElement2.classList.add('project__box-img');
   imgElement2.src = projetRow.imgButtonBox2;
   imgElement2.alt = 'Button';
 

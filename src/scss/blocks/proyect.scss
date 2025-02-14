@@ -41,6 +41,7 @@
     @include responsive(laptop) {
       opacity: 0;
       transition: opacity 0.8s ease;
+      max-width: 450px;
     }
   }
 
@@ -54,7 +55,7 @@
     @include responsive(desktop) {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 10px;
       margin-inline: 123px;
     }
     &-reverse {
@@ -115,11 +116,19 @@
         & .project__title::after {
           scale: 1;
         }
+
+        & .project__box-img {
+          rotate: 45deg;
+        }
       }
     }
 
     @include responsive(desktop) {
       background-position: center;
+    }
+
+    &-img {
+      transition: rotate 0.8s;
     }
 
     &-1 {
