@@ -36,12 +36,13 @@
 
   &__subtitle {
     font-family: 'ClashDisplay-Light';
-    font-size: 24px;
+    font-size: 20px;
     line-height: 120%;
+    letter-spacing: -1%;
+    max-width: 414px;
     @include responsive(laptop) {
       opacity: 0;
       transition: opacity 0.8s ease;
-      max-width: 450px;
     }
   }
 
@@ -107,6 +108,7 @@
     @include responsive(laptop) {
       background-position: top;
       transition: width 0.8s;
+      height: 372px;
 
       @include hover {
         & .project__subtitle {
@@ -125,6 +127,7 @@
 
     @include responsive(desktop) {
       background-position: center;
+      height: 541px;
     }
 
     &-img {
@@ -144,7 +147,7 @@
       @include responsive(laptop) {
         width: 40%;
         @include hover {
-          width: 100%;
+          width: 80%;
         }
       }
     }

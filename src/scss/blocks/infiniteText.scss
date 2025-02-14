@@ -18,6 +18,17 @@
   @include responsive(tablet) {
     height: 70px;
     font-size: 80px;
+    top: 20px;
+  }
+
+  @include responsive(tablet) {
+    height: 90px;
+    font-size: 100px;
+  }
+
+  @include responsive(tablet) {
+    height: 120px;
+    font-size: 140px;
   }
 }
 
@@ -32,7 +43,7 @@
 }
 
 .words {
-  $text-width: 500px;
+  $text-width: 480px;
   display: inline-block;
   white-space: nowrap;
   width: $text-width;
@@ -40,7 +51,7 @@
   text-shadow: generate-text-shadow($text-width);
 
   @include responsive(tablet) {
-    $text-width: 810px;
+    $text-width: 1400px;
     width: $text-width;
     text-shadow: generate-text-shadow($text-width);
   }
@@ -53,11 +64,11 @@
 }
 .infiniteText-2 {
   position: relative;
-  top: 75px;
+  top: 156px;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 70px;
+  height: 60px;
   margin-inline: auto;
   font-family: 'ClashDisplay-SemiBold';
   font-weight: 600;
@@ -70,6 +81,13 @@
     height: 70px;
     font-size: 90px;
     top: 155px;
+
+    font-size: 90px;
+  }
+
+  @include responsive(laptop) {
+    height: 120px;
+    font-size: 170px;
   }
 }
 
@@ -93,6 +111,12 @@
 
   @include responsive(tablet) {
     $text-width: 420px;
+    width: $text-width;
+    text-shadow: generate-text-shadow-2($text-width);
+  }
+
+  @include responsive(laptop) {
+    $text-width: 800px;
     width: $text-width;
     text-shadow: generate-text-shadow-2($text-width);
   }
