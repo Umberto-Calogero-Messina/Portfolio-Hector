@@ -102,6 +102,8 @@
 }
 
 .words-2 {
+  position: relative;
+  bottom: -1px;
   $text-width: 340px;
   display: inline-block;
   white-space: nowrap;

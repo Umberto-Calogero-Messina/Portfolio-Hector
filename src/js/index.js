@@ -48,6 +48,9 @@ const createRow = projetRow => {
   newBox.append(newBoxTexts, pElement);
 
   const newBox2 = document.createElement('div');
+  if (projetRow.titleBox2 === 'Endesa') {
+    newBox2.classList.add('project__box--dark');
+  }
   newBox2.classList.add('project__box', 'project__box-2');
   newBox2.style.setProperty('--bg-image-mobile', projetRow.bgImageMobileBox2);
 
@@ -55,6 +58,11 @@ const createRow = projetRow => {
   newBoxTexts2.classList.add('project__element');
 
   const newTitle2 = document.createElement('h2');
+
+  if (projetRow.titleBox2 === 'Endesa') {
+    newTitle2.classList.add('project__title--dark');
+  }
+
   newTitle2.classList.add('project__title');
   newTitle2.textContent = projetRow.titleBox2;
 
@@ -68,6 +76,10 @@ const createRow = projetRow => {
   imgElement2.alt = 'Button';
 
   const pElement2 = document.createElement('p');
+
+  if (projetRow.titleBox2 === 'Endesa') {
+    pElement2.classList.add('project__subtitle--dark');
+  }
   pElement2.classList.add('project__subtitle');
   pElement2.textContent = projetRow.subTitleBox2;
 

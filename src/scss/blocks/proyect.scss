@@ -9,7 +9,8 @@
   position: relative;
 
   &__title {
-    width: 215px;
+    // width: 215px;
+
     font-family: 'ClashDisplay-Light';
     font-size: 34px;
     line-height: 90%;
@@ -27,11 +28,19 @@
         transition: scale 0.8s ease;
       }
     }
+
+    &--dark {
+      color: black;
+      &::after {
+        background-color: black;
+      }
+    }
   }
 
   &__element {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__subtitle {
@@ -43,6 +52,10 @@
     @include responsive(laptop) {
       opacity: 0;
       transition: opacity 0.8s ease;
+    }
+
+    &--dark {
+      color: black;
     }
   }
 
@@ -92,10 +105,9 @@
     background-image: var(--bg-image-mobile);
     background-repeat: no-repeat;
     background-size: cover;
-
     height: 257px;
 
-    padding: 1rem;
+    padding: 40px 24px;
     margin-bottom: 32px;
     margin-inline: 16px;
     border-radius: 21px;
@@ -108,18 +120,29 @@
 
     &::after {
       @include pseudo(100%, 100%) {
-        top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 50%;
+        bottom: 0;
         z-index: -1;
         transition: background-color 0.2s linear;
         background-color: transparent;
       }
     }
     @include hover {
+      // REMOVER HERMANO SIGUIENTE
+      & + .project__box .project__element {
+        display: none;
+      }
+      // END
+
+      // &:has(.project__box:hover) .project__element {
+      //   height: 1000px;
+      // }
+
       &::after {
-        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 21px;
+        background-color: rgba(79, 0, 88, 0.3);
       }
     }
 
@@ -128,7 +151,7 @@
       background-position: center;
     }
     @include responsive(laptop) {
-      background-position: top;
+      background-position: center;
       transition: width 0.8s;
       height: 372px;
 
@@ -150,6 +173,15 @@
     @include responsive(desktop) {
       background-position: center;
       height: 541px;
+    }
+
+    &--dark {
+      @include hover {
+        &::after {
+          background-color: rgba(254, 254, 254, 0.4);
+          border-radius: 21px;
+        }
+      }
     }
 
     &-img {
