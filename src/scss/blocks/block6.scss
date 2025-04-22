@@ -75,7 +75,7 @@
   }
 
   &__box1 {
-    background-image: url(../../assets/images/vodafone/vodafone-project1.jpg);
+    background-image: url(./../assets/images/Card1.jpg);
     @include responsive(desktop) {
       width: 709px;
     }
@@ -86,7 +86,7 @@
   }
 
   &__box2 {
-    background-image: url(../../assets/images/vodafone/vodafone-project1.jpg);
+    background-image: url(./../assets/images/Card2.jpg);
     @include responsive(desktop) {
       width: 709px;
     }
