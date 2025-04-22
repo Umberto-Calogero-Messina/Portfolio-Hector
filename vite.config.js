@@ -15,7 +15,7 @@ export default defineConfig({
       hook: 'writeBundle' // Aseguramos que los archivos se copien después de que el bundle se haya generado
     })
   ],
-  base: '',
+  base: '/Portfolio-Hector/',
   root: 'src',
   build: {
     rollupOptions: {
