@@ -1,13 +1,13 @@
-const basePath = window.location.pathname.includes('subfolder') ? '../../' : '../';
+const basePath = window.location.pathname.includes('subfolder') ? './../' : './';
 
 export const PROJECTS = [
   {
     titleBox1: "Vodafone's B2B",
     subTitleBox1: 'The key pain points identified by users played a pivotal role in shaping the project’s development:',
-    bgImageMobileBox1: `${import.meta.env.BASE_URL}assets/images/Card1.jpg)`,
-    bgImageTabletBox1: `${import.meta.env.BASE_URL}assets/images/Card1.jpg)`,
-    bgImageLaptopBox1: `${import.meta.env.BASE_URL}assets/images/Card1.jpg)`,
-    bgImageDesktopBox1: `${import.meta.env.BASE_URL}assets/images/Card1.jpg)`,
+    bgImageMobileBox1: `./assets/images/Card1.jpg)`,
+    bgImageTabletBox1: `./assets/images/Card1.jpg)`,
+    bgImageLaptopBox1: `./assets/images/Card1.jpg)`,
+    bgImageDesktopBox1: `./assets/images/Card1.jpg)`,
     imgButtonBox1: `${basePath}assets/images/Arrow.svg`,
 
     titleBox2: 'Endesa',
