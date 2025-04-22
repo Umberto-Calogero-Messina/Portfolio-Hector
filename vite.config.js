@@ -4,6 +4,8 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import copy from 'rollup-plugin-copy';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default defineConfig({
   plugins: [
     ViteMinifyPlugin({}),
@@ -15,8 +17,28 @@ export default defineConfig({
       hook: 'writeBundle' // Aseguramos que los archivos se copien después de que el bundle se haya generado
     })
   ],
-  base: '',
+
+  base: isProduction ? '/Portfolio_Hector/' : '',
+
   root: 'src',
+
+  plugins: [
+    ViteMinifyPlugin({}),
+    ViteImageOptimizer({
+      include: ['**/*.png', '**/*.jpg', '**/*.jpeg']
+    }),
+    copy({
+      targets: [{ src: 'src/assets/images/*', dest: 'docs/assets' }],
+      hook: 'writeBundle'
+    })
+  ],
+
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src')
+    }
+  },
+
   build: {
     rollupOptions: {
       input: {
@@ -25,7 +47,6 @@ export default defineConfig({
         vodafone: resolve(__dirname, 'src/html/vodafone.html'),
         endesa: resolve(__dirname, 'src/html/endesa.html'),
         iberdrola: resolve(__dirname, 'src/html/iberdrola.html')
-        // Añade aquí el resto de páginas que quieras.(nombre único: resolve(__dirname, 'src/html/archivo.html'))
       }
     },
     outDir: '../docs'
