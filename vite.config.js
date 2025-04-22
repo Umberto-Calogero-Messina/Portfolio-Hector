@@ -5,21 +5,18 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import copy from 'rollup-plugin-copy';
 
 export default defineConfig({
-  base: '',
-
-  root: 'src',
-
   plugins: [
     ViteMinifyPlugin({}),
     ViteImageOptimizer({
       include: ['**/*.png', '**/*.jpg', '**/*.jpeg']
     }),
     copy({
-      targets: [{ src: 'src/assets/images/*', dest: 'docs/assets' }],
-      hook: 'writeBundle'
+      targets: [{ src: 'src/assets/images/*.svg', dest: 'docs/assets' }],
+      hook: 'writeBundle' // Aseguramos que los archivos se copien después de que el bundle se haya generado
     })
   ],
-
+  base: '',
+  root: 'src',
   build: {
     rollupOptions: {
       input: {
