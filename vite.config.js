@@ -15,14 +15,16 @@ export default defineConfig({
       hook: 'writeBundle' // Aseguramos que los archivos se copien después de que el bundle se haya generado
     })
   ],
-  base: '',
+  base: '/Portfolio-Hector/',
   root: 'src',
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
         about: resolve(__dirname, 'src/html/about.html'),
-        contact: resolve(__dirname, 'src/html/contact.html')
+        vodafone: resolve(__dirname, 'src/html/vodafone.html'),
+        endesa: resolve(__dirname, 'src/html/endesa.html'),
+        iberdrola: resolve(__dirname, 'src/html/iberdrola.html')
         // Añade aquí el resto de páginas que quieras.(nombre único: resolve(__dirname, 'src/html/archivo.html'))
       }
     },

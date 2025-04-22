@@ -2,7 +2,7 @@
 @use 'base/initial-reset.scss';
 @use 'config/variables.scss';
 @use 'config/fonts.scss';
-@use 'blocks/texts.scss';
+
 @use 'blocks/body.scss';
 @use 'blocks/main.scss';
 @use 'blocks/header.scss';
@@ -12,3 +12,20 @@
 @use 'blocks/infiniteText.scss';
 @use 'blocks/proyect.scss';
 @use 'blocks/footer.scss';
+
+//TO REMOVE
+//@use 'blocks/vodafone.scss';
+//@use 'blocks/challenge.scss';
+//@use 'blocks/preset.scss';
+//@use 'blocks/design.scss';
+@use 'blocks/texts.scss';
+
+@use 'blocks/titulo.scss';
+@use 'blocks/image.scss';
+@use 'blocks/block1.scss';
+@use 'blocks/blockInfo.scss';
+@use 'blocks/block2.scss';
+@use 'blocks/block3.scss';
+@use 'blocks/block4.scss';
+@use 'blocks/block5.scss';
+@use 'blocks/block6.scss';

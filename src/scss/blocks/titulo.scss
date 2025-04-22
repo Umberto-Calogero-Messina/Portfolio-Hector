@@ -1,0 +1,36 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.modulo__titulo {
+  padding: 32px 17px;
+  text-align: left;
+
+  @include responsive(desktop) {
+    display: flex;
+    gap: 134px;
+    padding: 0px 32px;
+    justify-content: space-between;
+  }
+
+  &--box {
+    @include responsive(desktop) {
+      margin-top: 180px;
+      &Small {
+        width: 585px;
+      }
+    }
+  }
+
+  &--titulo {
+    padding-bottom: 48px;
+    @include responsive(desktop) {
+      &Small {
+        width: 550px;
+      }
+    }
+  }
+
+  &--subtitulo {
+    padding-bottom: 16px;
+  }
+}

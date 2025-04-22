@@ -1,0 +1,32 @@
+@use '../mixins/responsive.scss' as *;
+
+.modulo__block4 {
+  margin-inline: 16px;
+  margin-bottom: 72px;
+  text-align: left;
+
+  @include responsive(desktop) {
+    display: flex;
+    flex-direction: row;
+    gap: 73px;
+    justify-content: center;
+
+    margin-bottom: 144px;
+  }
+
+  &-title {
+    margin: 0 0 32px 0;
+    @include responsive(desktop) {
+      margin: 0;
+    }
+  }
+
+  &-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include responsive(desktop) {
+      width: 585px;
+    }
+  }
+}

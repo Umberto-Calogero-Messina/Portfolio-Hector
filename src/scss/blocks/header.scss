@@ -12,6 +12,10 @@
   margin-inline: auto;
   overflow-x: clip;
 
+  &-container {
+    margin-bottom: 0;
+  }
+
   &__bar {
     max-width: 1440px;
     margin-inline: auto;
@@ -93,9 +97,9 @@
   }
 
   &__link {
-    font-family: 'Josefin Sans', serif;
-    font-size: 24px;
-    line-height: 25px;
-    font-weight: 300;
+    font-family: 'ClashDisplay-Medium';
+    font-size: 18px;
+    line-height: 90%;
+    font-weight: 500;
   }
 }

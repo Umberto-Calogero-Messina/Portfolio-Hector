@@ -1,0 +1,34 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+
+.preset {
+  text-align: left;
+  margin-inline: 16px;
+  margin-bottom: 72px;
+  border-radius: 22px;
+  background: #1a1a1a;
+
+  display: flex;
+  padding: 32px 24px;
+  gap: 24px;
+
+  @include responsive(desktop) {
+    margin-inline: 156px;
+  }
+
+  &__svg {
+    width: 40px;
+    height: 40px;
+  }
+  &__p {
+    color: #fff;
+
+    font-family: 'Albert Sans';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.14px;
+  }
+}

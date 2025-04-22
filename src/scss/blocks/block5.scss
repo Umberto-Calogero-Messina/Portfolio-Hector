@@ -1,0 +1,55 @@
+@use '../mixins/responsive.scss' as *;
+
+.modulo__block5 {
+  margin-inline: 16px;
+  margin-bottom: 32px;
+
+  display: flex;
+  padding: 32px 16px 47px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  border-radius: 16px;
+  background: #1a1a1a;
+
+  @include responsive(desktop) {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-inline: 0;
+    padding: 50px 71px 95px 70px;
+  }
+
+  &--marginBot {
+    margin-bottom: 94px;
+    @include responsive(desktop) {
+      margin-bottom: 178px;
+    }
+  }
+
+  &--marginBot2 {
+    margin-bottom: 94px;
+    @include responsive(desktop) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-img {
+    @include responsive(desktop) {
+      padding: 80px 84px;
+    }
+
+    &-new {
+      padding: 0;
+    }
+  }
+
+  &-title {
+    width: 188px;
+    text-align: center;
+
+    @include responsive(desktop) {
+      width: auto;
+    }
+  }
+}

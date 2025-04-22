@@ -1,0 +1,36 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.modulo__block1 {
+  margin-inline: 16px;
+
+  @include responsive(desktop) {
+    margin-inline: 240px;
+  }
+
+  &--subititle {
+    margin-bottom: 24px;
+  }
+
+  &--title {
+    margin-bottom: 56px;
+  }
+
+  &--text {
+    margin-bottom: 104px;
+    @include responsive(desktop) {
+      margin-bottom: 175px;
+    }
+
+    &-title {
+      margin-bottom: 56px;
+    }
+
+    &-p {
+      margin-bottom: 90px;
+      @include responsive(desktop) {
+        width: 954px;
+      }
+    }
+  }
+}

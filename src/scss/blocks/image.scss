@@ -1,0 +1,93 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.image {
+  margin-inline: 16px;
+  margin-bottom: 104px;
+
+  @include responsive(desktop) {
+    margin-inline: 32px;
+    margin-bottom: 144px;
+  }
+
+  &-full {
+    border-radius: 16px;
+    border: 1px solid #d9d9d9;
+
+    @include responsive(desktop) {
+      border-radius: 38px;
+    }
+  }
+  &-sideBySide {
+    border-radius: 16px;
+  }
+}
+
+.scrollText {
+  width: 100%;
+  height: 80px;
+  background-image: url(../../assets/images/vodafone/infiniteText.svg);
+  // background-size: 70%;
+  animation: animateBg 4s infinite linear;
+  margin-bottom: 104px;
+  background-repeat: repeat-x;
+
+  @include responsive(desktop) {
+    margin-bottom: 176px;
+  }
+}
+
+.scrollText2 {
+  background-image: url(../../assets/images/vodafone/infiniteText2.svg);
+  animation: animateBg2 4s infinite linear;
+}
+
+.scrollText3 {
+  height: 120px;
+  margin-bottom: 244px;
+  background-image: url(../../assets/images/vodafone/infiniteText3.svg);
+  animation: animateBg3 4s infinite linear;
+}
+
+.scrollText4 {
+  height: 120px;
+  margin-bottom: 244px;
+  background-image: url(../../assets/images/vodafone/infiniteText4.svg);
+  animation: animateBg4 4s infinite linear;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 569px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes animateBg2 {
+  0% {
+    background-position: 498px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes animateBg3 {
+  0% {
+    background-position: 796px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes animateBg4 {
+  0% {
+    background-position: 430px;
+  }
+  100% {
+    background-position: 0;
+  }
+}

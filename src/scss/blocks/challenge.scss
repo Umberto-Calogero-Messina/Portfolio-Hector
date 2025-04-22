@@ -1,0 +1,92 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+
+.container {
+  padding: 32px 17px;
+  text-align: center;
+
+  &__img {
+    @include responsive(desktop) {
+      margin-bottom: 144px;
+    }
+  }
+
+  &__flex {
+    @include responsive(desktop) {
+      display: flex;
+      gap: 144px;
+    }
+  }
+
+  &__marginInline {
+    margin-inline: 0;
+  }
+
+  &__div {
+    @include responsive(desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  &-txtleft {
+    text-align: left;
+  }
+
+  &__span {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__p {
+    margin-bottom: 56px;
+  }
+
+  &__statics {
+    text-align: left;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+    margin-bottom: 72px;
+
+    @include responsive(desktop) {
+      flex-direction: row;
+      gap: 165px;
+
+      padding: 32px 0;
+    }
+
+    &-title {
+      color: #7a7a7a;
+
+      font-family: 'Albert Sans';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &-subtitle {
+      font-family: 'Albert Sans';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__list {
+    text-align: left;
+    margin-bottom: 72px;
+
+    &__ul {
+      padding: 20px 5px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.modulo__block2 {
+  display: flex;
+  padding: 32px 24px;
+  gap: 24px;
+  margin-inline: 16px;
+  margin-bottom: 104px;
+  border-radius: 16px;
+  background: #1a1a1a;
+  align-items: center;
+
+  @include responsive(desktop) {
+    margin-inline: 156px;
+    padding: 48px 56px;
+    gap: 40px;
+
+    margin-bottom: 144px;
+  }
+
+  &--svg {
+    width: 40px;
+    height: 40px;
+    @include responsive(desktop) {
+      width: 93px;
+      height: 93px;
+    }
+  }
+}
+
+.preset {
+  text-align: left;
+  margin-inline: 16px;
+  margin-bottom: 72px;
+  border-radius: 22px;
+  background: #1a1a1a;
+
+  display: flex;
+  padding: 32px 24px;
+  gap: 24px;
+
+  @include responsive(desktop) {
+    margin-inline: 156px;
+  }
+
+  &__svg {
+    width: 40px;
+    height: 40px;
+  }
+  &__p {
+    color: #fff;
+
+    font-family: 'Albert Sans';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.14px;
+  }
+}
