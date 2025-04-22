@@ -20,21 +20,22 @@ export const PROJECTS = [
     reverse: false
   },
   {
-    titleBox1: 'Iberdrola',
+    titleBox1: 'SavePoint',
     subTitleBox1: 'The key pain points identified by users played a pivotal role in shaping the project’s development:',
-    bgImageMobileBox1: 'url(../assets/images/Card3.jpg)',
-    bgImageTabletBox1: 'url(../assets/images/Card3.jpg)',
-    bgImageLaptopBox1: 'url(../assets/images/Card3.jpg)',
-    bgImageDesktopBox1: 'url(../assets/images/Card3.jpg)',
+    bgImageMobileBox1: 'url(../assets/images/Card4.jpg)',
+    bgImageTabletBox1: 'url(../assets/images/Card4.jpg)',
+    bgImageLaptopBox1: 'url(../assets/images/Card4.jpg)',
+    bgImageDesktopBox1: 'url(../assets/images/Card4.jpg)',
     imgButtonBox1: `${basePath}assets/images/Arrow.svg`,
 
-    titleBox2: 'SavePoint',
+    titleBox2: 'Iberdrola',
     subTitleBox2: 'The key pain points identified by users played a pivotal role in shaping the project’s development:',
-    bgImageMobileBox2: 'url(../assets/images/Card4.jpg)',
-    bgImageTabletBox2: 'url(../assets/images/Card4.jpg)',
-    bgImageLaptopBox2: 'url(../assets/images/Card4.jpg)',
-    bgImageDesktopBox2: 'url(../assets/images/Card4.jpg)',
+    bgImageMobileBox2: 'url(../assets/images/Card3.jpg)',
+    bgImageTabletBox2: 'url(../assets/images/Card3.jpg)',
+    bgImageLaptopBox2: 'url(../assets/images/Card3.jpg)',
+    bgImageDesktopBox2: 'url(../assets/images/Card3.jpg)',
     imgButtonBox2: `${basePath}assets/images/Arrow.svg`,
+
     reverse: true
   }
   // {
