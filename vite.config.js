@@ -7,17 +7,6 @@ import copy from 'rollup-plugin-copy';
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
-  plugins: [
-    ViteMinifyPlugin({}),
-    ViteImageOptimizer({
-      include: ['**/*.png', '**/*.jpg', '**/*.jpeg']
-    }),
-    copy({
-      targets: [{ src: 'src/assets/images/*.svg', dest: 'docs/assets' }],
-      hook: 'writeBundle' // Aseguramos que los archivos se copien después de que el bundle se haya generado
-    })
-  ],
-
   base: isProduction ? '/Portfolio_Hector/' : '',
 
   root: 'src',
