@@ -1,5 +1,4 @@
-const isGitHubPages = window.location.host.includes('github.io');
-const basePath = isGitHubPages ? './' : './';
+const basePath = import.meta.env.BASE_URL || './';
 
 export const PROJECTS = [
   {
