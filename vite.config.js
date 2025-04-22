@@ -4,10 +4,8 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import copy from 'rollup-plugin-copy';
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 export default defineConfig({
-  base: isProduction ? '/Portfolio_Hector/' : '',
+  base: '',
 
   root: 'src',
 
@@ -21,12 +19,6 @@ export default defineConfig({
       hook: 'writeBundle'
     })
   ],
-
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  },
 
   build: {
     rollupOptions: {
