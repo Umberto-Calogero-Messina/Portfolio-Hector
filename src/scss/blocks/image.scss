@@ -56,6 +56,21 @@
   animation: animateBg4 4s infinite linear;
 }
 
+.scrollText5 {
+  height: 120px;
+  margin-top: 72px;
+  // margin-bottom: 244px;
+  background-image: url(./../assets/images/infiniteText5.svg);
+  animation: animateBg5 4s infinite linear;
+}
+
+.scrollText6 {
+  height: 120px;
+  margin-bottom: 244px;
+  background-image: url(./../assets/images/infiniteText6.svg);
+  animation: animateBg6 4s infinite linear;
+}
+
 @keyframes animateBg {
   0% {
     background-position: 569px;
@@ -86,6 +101,24 @@
 @keyframes animateBg4 {
   0% {
     background-position: 430px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes animateBg5 {
+  0% {
+    background-position: 1246px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes animateBg6 {
+  0% {
+    background-position: 1097px;
   }
   100% {
     background-position: 0;

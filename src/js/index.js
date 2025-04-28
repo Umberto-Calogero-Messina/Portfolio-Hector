@@ -19,9 +19,10 @@ const createRow = projetRow => {
   const newRowClass = projetRow.reverse && 'project-row-reverse';
   newRow.classList.add('project-row', newRowClass);
 
-  const newBox = document.createElement('div');
+  const newBox = document.createElement('a');
   newBox.classList.add('project__box', 'project__box-1');
   newBox.style.setProperty('--bg-image-mobile', projetRow.bgImageMobileBox1);
+  newBox.href = projetRow.linkBox1;
 
   const newBoxTexts = document.createElement('div');
   newBoxTexts.classList.add('project__element');
@@ -32,7 +33,6 @@ const createRow = projetRow => {
 
   const newLink = document.createElement('a');
   newLink.classList.add('project__box-text');
-  newLink.href = '#';
 
   const imgElement = document.createElement('img');
   imgElement.classList.add('project__box-img');
@@ -47,19 +47,20 @@ const createRow = projetRow => {
   newBoxTexts.append(newTitle, newLink);
   newBox.append(newBoxTexts, pElement);
 
-  const newBox2 = document.createElement('div');
-  if (projetRow.titleBox2 === 'Endesa') {
+  const newBox2 = document.createElement('a');
+  if (projetRow.titleBox2.includes('Endesa')) {
     newBox2.classList.add('project__box--dark');
   }
   newBox2.classList.add('project__box', 'project__box-2');
   newBox2.style.setProperty('--bg-image-mobile', projetRow.bgImageMobileBox2);
+  newBox2.href = projetRow.linkBox2;
 
   const newBoxTexts2 = document.createElement('div');
   newBoxTexts2.classList.add('project__element');
 
   const newTitle2 = document.createElement('h2');
 
-  if (projetRow.titleBox2 === 'Endesa') {
+  if (projetRow.titleBox2.includes('Endesa')) {
     newTitle2.classList.add('project__title--dark');
   }
 
@@ -68,7 +69,6 @@ const createRow = projetRow => {
 
   const newLink2 = document.createElement('a');
   newLink2.classList.add('project__box-text');
-  newLink2.href = '#';
 
   const imgElement2 = document.createElement('img');
   imgElement2.classList.add('project__box-img');
@@ -77,7 +77,7 @@ const createRow = projetRow => {
 
   const pElement2 = document.createElement('p');
 
-  if (projetRow.titleBox2 === 'Endesa') {
+  if (projetRow.titleBox2.includes('Endesa')) {
     pElement2.classList.add('project__subtitle--dark');
   }
   pElement2.classList.add('project__subtitle');

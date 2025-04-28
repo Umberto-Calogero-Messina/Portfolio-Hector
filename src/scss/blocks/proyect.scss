@@ -186,13 +186,14 @@
 
     @include responsive(desktop) {
       background-position: center;
+
       height: 541px;
     }
 
     &--dark {
       @include hover {
         &::after {
-          background-color: rgba(254, 254, 254, 0.4);
+          background-color: rgba(254, 254, 254, 0.5);
           // border-radius: 21px;
         }
       }

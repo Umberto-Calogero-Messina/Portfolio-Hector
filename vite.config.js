@@ -50,10 +50,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        about: resolve(__dirname, 'src/html/about.html'),
+        contact: resolve(__dirname, 'src/html/contact.html'),
         vodafone: resolve(__dirname, 'src/html/vodafone.html'),
         endesa: resolve(__dirname, 'src/html/endesa.html'),
-        iberdrola: resolve(__dirname, 'src/html/iberdrola.html')
+        iberdrola: resolve(__dirname, 'src/html/iberdrola.html'),
+        savepoint: resolve(__dirname, 'src/html/savepoint.html')
       },
       output: {
         // Organizza gli assets in sottocartelle - NUOVO:

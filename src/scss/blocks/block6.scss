@@ -55,7 +55,7 @@
     }
     @include hover {
       &::after {
-        background-color: rgba(148, 148, 148, 0.6);
+        background-color: rgba(32, 14, 41, 0.6);
       }
     }
     @include responsive(desktop) {
@@ -69,6 +69,14 @@
 
         & .modulo__block6-img {
           rotate: 45deg;
+        }
+      }
+    }
+
+    &-black {
+      @include hover {
+        &::after {
+          background-color: rgba(254, 254, 254, 0.4);
         }
       }
     }
@@ -86,7 +94,7 @@
   }
 
   &__box2 {
-    background-image: url(./../assets/images/Card2.jpg);
+    background-image: url(./../assets/images/Card3.jpg);
     @include responsive(desktop) {
       width: 709px;
     }

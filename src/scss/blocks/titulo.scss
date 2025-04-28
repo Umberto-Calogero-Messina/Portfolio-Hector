@@ -10,14 +10,24 @@
     gap: 134px;
     padding: 0px 32px;
     justify-content: space-between;
+    align-items: center;
   }
 
   &--box {
     @include responsive(desktop) {
-      margin-top: 180px;
-      &Small {
+      // margin-top: 180px;
+      &Iberdrola {
         width: 585px;
       }
+      &Endesa {
+        width: 700px;
+      }
+    }
+  }
+
+  &-margintop {
+    @include responsive(desktop) {
+      margin-top: 80px;
     }
   }
 
