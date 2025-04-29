@@ -40,6 +40,11 @@
 
     cursor: pointer;
 
+    &-p {
+      position: relative;
+      top: 2px;
+    }
+
     &-last {
       margin-bottom: 61px;
     }
