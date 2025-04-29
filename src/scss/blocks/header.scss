@@ -95,9 +95,6 @@
     @include responsive(laptop) {
       padding: 0 40px;
     }
-    @include hover {
-      color: #6f6f6f;
-    }
   }
 
   &__link {
@@ -105,5 +102,8 @@
     font-size: 18px;
     line-height: 90%;
     font-weight: 500;
+    @include hover {
+      color: #6f6f6f;
+    }
   }
 }

@@ -32,6 +32,10 @@ export default defineConfig({
         {
           src: 'src/assets/images/**/*', // Prende tutte le immagini
           dest: 'docs/assets/images' // Le copia mantenendo la struttura
+        },
+        {
+          src: 'src/assets/fonts/**/*', // Prende tutti i fonts
+          dest: 'docs/assets/fonts' // E copia nella posizione giusta
         }
       ],
       hook: 'writeBundle', // Esegue dopo il build
@@ -62,6 +66,8 @@ export default defineConfig({
           const extType = assetInfo.name.split('.').at(1);
           if (/png|jpe?g|svg|gif|webp|avif|tiff|bmp/i.test(extType)) {
             return `assets/images/[name].[hash][extname]`; // Immagini in /assets/images/
+          } else if (/woff2?|ttf|otf|eot/i.test(extType)) {
+            return `assets/fonts/[name].[hash][extname]`; // Fonts in /assets/fonts/
           }
           return `assets/[name].[hash][extname]`; // Altri asset in /assets/
         }

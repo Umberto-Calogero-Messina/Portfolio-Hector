@@ -2,6 +2,8 @@
   background: #1a1a1a;
   padding: 120px 0px 246px 0px;
   margin-bottom: 128px;
+  position: relative;
+  z-index: 1;
 
   &__card {
     display: flex;
@@ -23,7 +25,9 @@
   }
 
   &__face {
-    margin-bottom: 48px;
+    position: relative;
+    top: -48px;
+    // margin-bottom: 48px;
   }
 
   &__link {
@@ -35,6 +39,10 @@
     border-bottom: 1px dashed white;
 
     cursor: pointer;
+
+    &-last {
+      margin-bottom: 61px;
+    }
   }
 
   &__title {
@@ -46,6 +54,14 @@
   }
 
   &__icons {
-    top: 500px;
+    position: absolute;
+    top: 300px;
+
+    &-right {
+      right: 56px;
+    }
+    &-left {
+      left: 56px;
+    }
   }
 }
