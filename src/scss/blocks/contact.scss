@@ -1,0 +1,51 @@
+.contact {
+  background: #1a1a1a;
+  padding: 120px 0px 246px 0px;
+  margin-bottom: 128px;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+    border: 12px solid #c7c8ec;
+
+    background: #8284d3;
+
+    margin-inline: 229px;
+  }
+
+  &__logo {
+    align-self: flex-end;
+    padding: 33px 36px;
+  }
+
+  &__face {
+    margin-bottom: 48px;
+  }
+
+  &__link {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 21px;
+    padding-bottom: 6px;
+    align-items: center;
+    border-bottom: 1px dashed white;
+
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    margin-bottom: 70px;
+  }
+
+  &__icons {
+    top: 500px;
+  }
+}

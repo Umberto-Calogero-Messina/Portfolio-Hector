@@ -367,4 +367,35 @@
       letter-spacing: -0.2px;
     }
   }
+
+  &__contact {
+    &-title {
+      font-family: 'ClashDisplay-Semibold';
+      color: #fff;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 90%; /* 45px */
+    }
+
+    &-subtitle {
+      color: #fff;
+
+      font-family: 'ClashDisplay-Light';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 90%; /* 18px */
+    }
+
+    &-link {
+      color: #fff;
+
+      font-family: 'ClashDisplay-Extralight';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 90%; /* 18px */
+    }
+  }
 }
