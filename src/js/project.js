@@ -2,15 +2,14 @@ const basePath = import.meta.env.BASE_URL || './';
 
 export const PROJECTS = [
   {
-    titleBox1: "Iberdrola's Design Hub",
-    subTitleBox1:
-      'Iberdrola asked for a complete facelift to transform its digital presence into a true reflection of its sustainable ethos.',
-    bgImageMobileBox1: 'url(../assets/images/Card1.jpg)',
-    bgImageTabletBox1: 'url(../assets/images/Card1.jpg)',
-    bgImageLaptopBox1: 'url(../assets/images/Card1.jpg)',
-    bgImageDesktopBox1: 'url(../assets/images/Card1.jpg)',
+    titleBox1: 'Mi Vodafone Business',
+    subTitleBox1: `We were tasked with revitalizing Vodafone's B2B platform. This project involved a complete visual and functional redesign.`,
+    bgImageMobileBox1: 'url(../assets/images/Card4.jpg)',
+    bgImageTabletBox1: 'url(../assets/images/Card4.jpg)',
+    bgImageLaptopBox1: 'url(../assets/images/Card4.jpg)',
+    bgImageDesktopBox1: 'url(../assets/images/Card4.jpg)',
     imgButtonBox1: `${basePath}assets/images/Arrow.svg`,
-    linkBox1: './html/iberdrola.html',
+    linkBox1: './html/vodafone.html',
 
     titleBox2: 'Endesa Cosmos',
     subTitleBox2: `We worked on the redesign of Endesa's digital channels, grasping the opportunity of the migration to Salesforce.`,
@@ -23,14 +22,15 @@ export const PROJECTS = [
     reverse: false
   },
   {
-    titleBox1: 'Mi Vodafone Business',
-    subTitleBox1: `We were tasked with revitalizing Vodafone's B2B platform. This project involved a complete visual and functional redesign.`,
-    bgImageMobileBox1: 'url(../assets/images/Card4.jpg)',
-    bgImageTabletBox1: 'url(../assets/images/Card4.jpg)',
-    bgImageLaptopBox1: 'url(../assets/images/Card4.jpg)',
-    bgImageDesktopBox1: 'url(../assets/images/Card4.jpg)',
+    titleBox1: "Iberdrola's Design Hub",
+    subTitleBox1:
+      'Iberdrola asked for a complete facelift to transform its digital presence into a true reflection of its sustainable ethos.',
+    bgImageMobileBox1: 'url(../assets/images/Card1.jpg)',
+    bgImageTabletBox1: 'url(../assets/images/Card1.jpg)',
+    bgImageLaptopBox1: 'url(../assets/images/Card1.jpg)',
+    bgImageDesktopBox1: 'url(../assets/images/Card1.jpg)',
     imgButtonBox1: `${basePath}assets/images/Arrow.svg`,
-    linkBox1: './html/vodafone.html',
+    linkBox1: './html/iberdrola.html',
 
     titleBox2: 'SavePoint',
     subTitleBox2: `Creamos un producto enfocado
