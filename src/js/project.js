@@ -33,7 +33,11 @@ export const PROJECTS = [
     linkBox1: './html/vodafone.html',
 
     titleBox2: 'SavePoint',
-    subTitleBox2: `We were tasked with revitalizing Vodafone's B2B platform. This project involved a complete visual and functional redesign.`,
+    subTitleBox2: `Creamos un producto enfocado
+                        al jugador habitual de videojuegos. Desde las
+                        encuestas a usuarios hasta los test de usabilidad la
+                        idea era conseguir una aplicación adaptada a las
+                        exigencias de un público muy específico.`,
     bgImageMobileBox2: 'url(../assets/images/Card3.jpg)',
     bgImageTabletBox2: 'url(../assets/images/Card3.jpg)',
     bgImageLaptopBox2: 'url(../assets/images/Card3.jpg)',
