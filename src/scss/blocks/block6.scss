@@ -103,6 +103,28 @@
     }
   }
 
+  &__box3 {
+    background-image: url(./../assets/images/Card2.jpg);
+    @include responsive(desktop) {
+      width: 709px;
+    }
+
+    @include hover {
+      width: 65%;
+    }
+  }
+
+  &__box4 {
+    background-image: url(./../assets/images/Card4.jpg);
+    @include responsive(desktop) {
+      width: 709px;
+    }
+
+    @include hover {
+      width: 65%;
+    }
+  }
+
   &-element {
     display: flex;
     justify-content: space-between;
@@ -125,6 +147,15 @@
         scale: 0;
         transform-origin: left;
         transition: scale 0.8s ease;
+      }
+    }
+
+    &-black {
+      color: black;
+      &::after {
+        @include pseudo(100%, 1px) {
+          background-color: #000000;
+        }
       }
     }
   }

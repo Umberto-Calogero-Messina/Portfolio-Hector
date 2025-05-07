@@ -106,7 +106,7 @@
     padding-bottom: 8px;
 
     @include responsive(desktop) {
-      gap: 4px;
+      gap: 15px;
       width: 200px;
     }
   }
